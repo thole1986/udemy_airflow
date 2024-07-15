@@ -25,7 +25,7 @@ if __name__ == '__main__':
         spark = SparkSession.builder.appName("FormatStock") \
             .config("fs.s3a.access.key", os.getenv("AWS_ACCESS_KEY_ID", "minio")) \
             .config("fs.s3a.secret.key", os.getenv("AWS_SECRET_ACCESS_KEY", "minio123")) \
-            .config("fs.s3a.endpoint", os.getenv("ENDPOINT", "http://host.docker.internal:9000")) \
+            .config("fs.s3a.endpoint", os.getenv("ENDPOINT", "http://host.docker.internal:9002")) \
             .config("fs.s3a.connection.ssl.enabled", "false") \
             .config("fs.s3a.path.style.access", "true") \
             .config("fs.s3a.attempts.maximum", "1") \

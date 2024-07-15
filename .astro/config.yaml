@@ -1,6 +1,6 @@
-postgres:
-    port: "5435"
 project:
-    name: udemy-airflow
+  name: airflow_learning
 webserver:
-    port: "8081"
+  port: 8081
+postgres:
+  port: 5435
