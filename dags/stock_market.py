@@ -6,7 +6,11 @@ from airflow.sensors.base import PokeReturnValue
 from airflow.providers.docker.operators.docker import DockerOperator
 from airflow.providers.slack.notifications.slack import SlackNotifier
 from airflow.operators.python import PythonOperator
-from include.stock_market.tasks import _get_stock_prices, _store_prices, _get_formatted_prices_from_minio
+from include.stock_market.tasks import (
+    _get_stock_prices,
+    _store_prices,
+    _get_formatted_prices_from_minio
+)
 from astro import sql as aql
 from astro.files import File
 from astro.sql.table import Table, Metadata
